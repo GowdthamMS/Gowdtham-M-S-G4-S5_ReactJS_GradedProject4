@@ -1,0 +1,70 @@
+import { useEffect } from 'react';
+import { IoSearch } from 'react-icons/io5';
+import { Link,useLocation } from "react-router-dom";
+
+
+interface IParams {
+  search: any
+}
+
+const Header = ({search}:IParams) => {
+
+  const location = useLocation();
+  console.log(location.pathname)
+
+  return (
+    <div className={'header'}>
+      <ul className="navbar">
+        <li className={location.pathname === "/" ? 'active' : ''}>
+          <Link className="home" to="/">
+            HOME (Movies Coming)
+          </Link>
+        </li>
+        <li className={location.pathname === "/movies-in-theaters" ? 'active' : ''}>
+          <Link className="favorite" to="/movies-in-theaters">
+          Movies in theaters
+          </Link>
+        </li>
+        <li className={location.pathname === "/top-rated-indian" ? 'active' : ''}>
+          <Link className="favorite" to="/top-rated-indian">
+          Top rated Indian
+          </Link>
+        </li>
+        <li className={location.pathname === "/top-rated-movies" ? 'active' : ''}>
+          <Link className="favorite" to="/top-rated-movies">
+          Top rated movies
+          </Link>
+        </li>
+        <li className={location.pathname === "/favourites" ? 'active' : ''}>
+          <Link className="favorite" to="/favourites">
+          favourites
+          </Link>
+        </li>
+      </ul>
+      { location.pathname !== "/favourites" &&
+            <div className="search-container">
+              <input className="search" type="text" onChange={(e)=>{search(e.target.value)}}></input>
+              <div className="search-btn">
+                <IoSearch/>
+              </div>
+            </div>
+      }
+    </div>
+  );
+};
+
+function App() {
+  let location = useLocation();
+
+  useEffect(() => {
+    // Google Analytics
+    ga ('send', 'pageview');
+  }, [location]);
+
+}
+
+export default Header;
+function ga(arg0: string, arg1: string) {
+  throw new Error('Function not implemented.');
+}
+
