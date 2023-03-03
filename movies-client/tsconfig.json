@@ -22,5 +22,5 @@
   },
   "include": [
     "src"
-  ]
+, "../movies-server/src/services", "../movies-server/src/services"  ]
 }
