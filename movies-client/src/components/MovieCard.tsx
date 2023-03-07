@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import IMovieItem from "../models/IMovieItem";
 import { IoHeartOutline, IoHeart, IoStar } from "react-icons/io5";
+import React from "react";
 
 const MovieCard = ({id, title, posterurl, averageRating, liked, onToggleHeart, storyline, onToggleModal}:IMovieItem) => {
 

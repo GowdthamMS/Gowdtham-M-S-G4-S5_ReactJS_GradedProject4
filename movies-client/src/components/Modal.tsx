@@ -1,3 +1,4 @@
+import React from "react";
 import IMovieDetail from "../models/IMovieDetail";
 
 const Modal = ({title, posterurl, storyline, closeModal}:IMovieDetail) => {

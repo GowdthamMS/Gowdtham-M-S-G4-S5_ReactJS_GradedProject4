@@ -1,24 +1,31 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
+import Favourites from './components/Favourites';
+import Home from './components/Home';
+import NotFound from './components/NotFound';
+import MoviesInTheaters from './components/MoviesInTheaters';
+import TopRatedIndian from './components/TopRatedIndian';
+import TopRatedMovies from './components/TopRatedMovies';
+import React from 'react';
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
+
 function App() {
+
+  
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        {/* <Header search={search} /> */}
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/movies-in-theaters" element={<MoviesInTheaters />} />
+          <Route path="/top-rated-indian" element={<TopRatedIndian />} />
+          <Route path="/top-rated-movies" element={<TopRatedMovies />} />
+          <Route path="/favourites" element={<Favourites />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </Router>
     </div>
   );
 }

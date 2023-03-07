@@ -1,10 +1,11 @@
 import MovieCard from "./MovieCard";
-import { getMovieList } from "../../../movies-server/src/services/Services";
+import { getMovieList } from "../services/Services";
 import { useEffect, useState } from "react";
 import IMovieItem from "../models/IMovieItem";
 import Modal from "./Modal";
 import IMovieDetail from "../models/IMovieDetail";
 import styled from "styled-components";
+import React from "react";
 
 const Container = styled.div`
   margin: 10px 40px 20px 40px;
