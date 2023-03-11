@@ -13,14 +13,14 @@ const Header = ({search}:IParams) => {
   return (
     <div className={'header'}>
       <ul className="navbar">
-      <li className={location.pathname === "/movies-in-theaters" ? 'active' : ''}>
-          <Link className="favorite" to="/movies-in-theaters">
-          Movies in theaters
-          </Link>
-        </li>
         <li className={location.pathname === "/" ? 'active' : ''}>
           <Link className="home" to="/">
            coming Soon
+          </Link>
+        </li>
+        <li className={location.pathname === "/movies-in-theaters" ? 'active' : ''}>
+          <Link className="favorite" to="/movies-in-theaters">
+          Movies in theaters
           </Link>
         </li>
         <li className={location.pathname === "/top-rated-indian" ? 'active' : ''}>

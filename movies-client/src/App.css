@@ -49,7 +49,7 @@
 .header {
     width: 100%;
     height: 90px;
-    background-color: #065985;
+    background-color: #4b006d;
     display: inline-flex;
     flex-direction: row;
     justify-content: space-between;
@@ -148,7 +148,7 @@
 
 .movie-card .img {
     height: auto;
-    margin: 50px;
+    margin: 20px;
     cursor: pointer;
 }
 
@@ -189,22 +189,22 @@
 
 .model-window {
     position: fixed;
-    background-color: rgba(0, 0, 0, 1);
+    background-color: rgb(218, 149, 207);
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    z-index: 1px;
     transition: all 0.3s;
+    overflow: auto;
 }
 
-.model-window:target {
+.modal-window:target {
     visibility: visible;
     opacity: 1;
     pointer-events: auto;
 }
 
-.model-window>div {
+.modal-window>div {
     width: 400px;
     position: absolute;
     top: 50%;
@@ -214,76 +214,105 @@
     background: white;
 }
 
-.model-window header {
+.modal-window header {
     font-weight: bold;
 }
 
-.model-window h1 {
-    font-size: auto;
-    margin: auto;
+.modal-window h1 {
+    font-size: 150%;
+    margin: 0 0 15px;
 }
 
-.model-close {
-    color: #121111;
-    line-height: auto;
-    font-size: 80%;
+.modal-close {
+    color: #000000;
+    line-height: 90px;
+    font-size: 1.5em;
+    font-weight: 700;
     position: absolute;
-    right: 10px;
-    text-align: right;
-    top: 2px;
+    right: 0;
+    text-align: center;
+    top: 0;
     width: 70px;
     cursor: pointer;
 }
 
-.model-close:hover {
-    color: rgb(0, 0, 0);
+.modal-close:hover {
+    color: rgb(241, 205, 205);
 }
 
 p.storyline {
-    height: 120px;
+    height: auto;
     text-align: left;
     display: block;
     margin: 0 0 50px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5em;
 }
 
 p.imdbrating {
-    height: 5px;
+    height: auto;
     text-align: left;
     display: block;
     margin: 0 0 5px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5em;
 }
 
 p.contentrating {
-    height: 5px;
+    height: auto;
     text-align: left;
     display: block;
     margin: 0 0 5px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5em;
 }
 
 p.duration {
-    height: 5px;
+    height: auto;
     text-align: left;
     display: block;
     margin: 0 0 5px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5em;
 }
 
 p.genres {
-    height: 5px;
+    height: auto;
     text-align: left;
     display: block;
     margin: 0 0 5px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5em;
 }
 
 p.actors {
-    height: 5px;
+    height: auto;
     text-align: left;
     display: block;
     margin: 0 0 5px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5em;
 }
 
 p.releasedate {
-    height: 5px;
+    height: auto;
     text-align: left;
     display: block;
     margin: 0 0 5px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5em;
 }

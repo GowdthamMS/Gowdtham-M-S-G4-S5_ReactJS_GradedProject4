@@ -3,12 +3,12 @@ interface IMovieDetail{
   posterurl: string,
   title: string,
   storyline: string,
-  ImdbRating: string,
-  ContentRating: String,
-  Duration:string,
-  Genres: string,
-  Actors: string,
-  ReleaseDate: string,
+  imdbRating: string,
+  contentRating: string,
+  duration:string,
+  genres: string,
+  actors: string,
+  releaseDate: string,
   }
   
   export default IMovieDetail;

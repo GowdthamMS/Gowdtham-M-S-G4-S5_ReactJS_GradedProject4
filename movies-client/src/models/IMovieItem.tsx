@@ -1,18 +1,18 @@
 interface IMovieItem{
 
-    id: number,
-    posterurl: string,
+  id: number,
+  posterurl: string,
   title: string,
   averageRating: string,
   liked: boolean,
   onToggleHeart:any,
   storyline: string,
-  ImdbRating: string,
-  ContentRating: String,
-  Duration:string,
-  Genres: string,
-  Actors: string,
-  ReleaseDate: string,
+  imdbRating: string,
+  contentRating: string,
+  duration:string,
+  genres: string,
+  actors: string,
+  releaseDate: string,
   onToggleModel: any
   }
   

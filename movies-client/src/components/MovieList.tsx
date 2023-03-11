@@ -35,12 +35,12 @@ const MovieList = ({ category, faved = false, searchTerm='' }: cat) => {
     title: "Sample",
     posterurl: "Sample URL",
     storyline: "Story",
-    ImdbRating: "Imdb Rating",
-    ContentRating: "Content Rating",
-    Duration: "Duration",
-    Genres: "Genres",
-    Actors: "Actors",
-    ReleaseDate: "Release Date",
+    imdbRating: "Imdb Rating",
+    contentRating: "Content Rating",
+    duration: "Duration",
+    genres: "Genres",
+    actors: "Actors",
+    releaseDate: "Release Date",
     closeModel: closeModel
   };
 
@@ -62,12 +62,12 @@ const MovieList = ({ category, faved = false, searchTerm='' }: cat) => {
         title: card?.title || '',
         posterurl: card?.posterurl || '',
         storyline: card?.storyline || '',
-        ImdbRating: card?.ImdbRating || '',
-        ContentRating: card?.ContentRating || '',
-        Duration: card?.Duration || '',
-        Genres: card?.Genres || '',
-        Actors: card?.Actors || '',
-        ReleaseDate: card?.ReleaseDate || '',
+        imdbRating: card?.imdbRating || '',
+        contentRating: card?.contentRating || '',
+        duration: card?.duration || '',
+        genres: card?.genres || '',
+        actors: card?.actors || '',
+        releaseDate: card?.releaseDate || '',
         closeModel: closeModel
       }
     )
@@ -155,12 +155,12 @@ const MovieList = ({ category, faved = false, searchTerm='' }: cat) => {
             onToggleHeart={handleHeart}
             onToggleModel={toggleModel}
             storyline={movie.storyline} 
-            ImdbRating={movie.ImdbRating} 
-            ContentRating={movie.ContentRating} 
-            Duration={movie.Duration} 
-            Genres={movie.Genres} 
-            Actors={movie.Actors} 
-            ReleaseDate={movie.ReleaseDate}          
+            imdbRating={movie.imdbRating} 
+            contentRating={movie.contentRating} 
+            duration={movie.duration} 
+            genres={movie.genres} 
+            actors={movie.actors} 
+            releaseDate={movie.releaseDate}          
             />
         );
       })}
@@ -176,12 +176,12 @@ const MovieList = ({ category, faved = false, searchTerm='' }: cat) => {
             onToggleHeart={handleHeart}
             onToggleModel={toggleModel}
             storyline={movie.storyline}             
-            ImdbRating={movie.ImdbRating} 
-            ContentRating={movie.ContentRating} 
-            Duration={movie.Duration} 
-            Genres={movie.Genres} 
-            Actors={movie.Actors} 
-            ReleaseDate={movie.ReleaseDate}
+            imdbRating={movie.imdbRating} 
+            contentRating={movie.contentRating} 
+            duration={movie.duration} 
+            genres={movie.genres} 
+            actors={movie.actors} 
+            releaseDate={movie.releaseDate}
             /> 
             );
       })}
@@ -197,12 +197,12 @@ const MovieList = ({ category, faved = false, searchTerm='' }: cat) => {
             onToggleHeart={handleHeart}
             onToggleModel={toggleModel}
             storyline={movie.storyline}
-            ImdbRating={movie.ImdbRating} 
-            ContentRating={movie.ContentRating} 
-            Duration={movie.Duration} 
-            Genres={movie.Genres} 
-            Actors={movie.Actors} 
-            ReleaseDate={movie.ReleaseDate} 
+            imdbRating={movie.imdbRating} 
+            contentRating={movie.contentRating} 
+            duration={movie.duration} 
+            genres={movie.genres} 
+            actors={movie.actors} 
+            releaseDate={movie.releaseDate} 
             />
         );
       })}
@@ -212,12 +212,12 @@ const MovieList = ({ category, faved = false, searchTerm='' }: cat) => {
         title={modelData.title}
         posterurl={modelData.posterurl}
         storyline={modelData.storyline}
-        ImdbRating={modelData.ImdbRating}
-        ContentRating={modelData.ContentRating}  
-        Duration={modelData.Duration} 
-        Genres={modelData.Genres}  
-        Actors={modelData.Actors}  
-        ReleaseDate={modelData.ReleaseDate}  
+        imdbRating={modelData.imdbRating}
+        contentRating={modelData.contentRating}  
+        duration={modelData.duration} 
+        genres={modelData.genres}  
+        actors={modelData.actors}  
+        releaseDate={modelData.releaseDate}  
         closeModel={modelData.closeModel}
       />
     }

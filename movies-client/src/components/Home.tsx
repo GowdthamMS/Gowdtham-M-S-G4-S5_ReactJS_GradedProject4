@@ -6,7 +6,7 @@ const Home = () => {
 
     const [searchTerm, setSearchTerm] = useState('');
     const search = (searchTermInput: string) => {
-        console.log("satya", searchTermInput);
+        console.log("", searchTermInput);
         setSearchTerm(searchTermInput);
     }
 

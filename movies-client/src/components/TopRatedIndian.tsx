@@ -5,7 +5,7 @@ import MovieList from "./MovieList";
 const TopRatedIndian = () => {
     const [searchTerm, setSearchTerm] = useState('');
     const search = (searchTermInput: string) => {
-        console.log("satya", searchTermInput);
+        console.log("", searchTermInput);
         setSearchTerm(searchTermInput);
     }
 
