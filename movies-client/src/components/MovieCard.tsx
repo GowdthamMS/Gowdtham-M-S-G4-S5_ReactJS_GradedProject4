@@ -1,10 +1,8 @@
-// import { useEffect } from "react";
 import { useEffect, useState } from "react";
-import IMovieItem from "../models/IMovieItem";
 import { IoHeartOutline, IoHeart, IoStar } from "react-icons/io5";
-import React from "react";
+import IMovieItem from "../models/IMovieItem";
 
-const MovieCard = ({id, title, posterurl, averageRating, liked, onToggleHeart, storyline, onToggleModal}:IMovieItem) => {
+const MovieCard = ({id, title, poster, averageRating, liked, onToggleHeart, onToggleModel}:IMovieItem) => {
 
   const [faved, setFaved] = useState(liked);
   
@@ -20,7 +18,7 @@ const MovieCard = ({id, title, posterurl, averageRating, liked, onToggleHeart, s
 
   return (
     <div className={"movie-card"}>
-      <img className="img" src={posterurl} alt="movie item" onClick={()=>{onToggleModal(id)}} />
+      <img className="img" src={poster} alt="movie item" onClick={()=>{onToggleModel(id)}} />
       <h4 className="title">{title}</h4>
       <div className="rateAndLike">
         <div className="rate">

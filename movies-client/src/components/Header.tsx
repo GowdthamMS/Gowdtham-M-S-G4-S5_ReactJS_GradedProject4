@@ -1,8 +1,5 @@
-import React from 'react';
-import { useEffect } from 'react';
-import { IoSearch } from 'react-icons/io5';
 import { Link,useLocation } from "react-router-dom";
-
+import { IoSearch } from "react-icons/io5";
 
 interface IParams {
   search: any
@@ -54,18 +51,4 @@ const Header = ({search}:IParams) => {
   );
 };
 
-function App() {
-  let location = useLocation();
-
-  useEffect(() => {
-    // Google Analytics
-    ga ('send', 'pageview');
-  }, [location]);
-
-}
-
 export default Header;
-function ga(arg0: string, arg1: string) {
-  throw new Error('Function not implemented.');
-}
-

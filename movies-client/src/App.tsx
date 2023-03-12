@@ -1,13 +1,12 @@
 import './App.css';
-
 import Favourites from './components/Favourites';
 import Home from './components/Home';
 import NotFound from './components/NotFound';
 import MoviesInTheaters from './components/MoviesInTheaters';
 import TopRatedIndian from './components/TopRatedIndian';
 import TopRatedMovies from './components/TopRatedMovies';
-import React from 'react';
-import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
+import {
+  BrowserRouter as Router, Routes, Route} from "react-router-dom";
 
 function App() {
 

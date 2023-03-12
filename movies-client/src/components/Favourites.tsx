@@ -1,4 +1,3 @@
-import React from "react";
 import { useState } from "react";
 import Header from "./Header";
 import MovieList from "./MovieList";
@@ -7,7 +6,7 @@ const Favourites = () => {
 
     const [searchTerm, setSearchTerm] = useState('');
     const search = (searchTermInput: string) => {
-        console.log("game night", searchTermInput);
+        console.log("", searchTermInput);
         setSearchTerm(searchTermInput);
     }
 

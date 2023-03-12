@@ -1,38 +1,259 @@
+* {
+    user-select: none;
+}
+
 .App {
-  text-align: center;
+    text-align: center;
 }
 
 .App-logo {
-  height: 40vmin;
-  pointer-events: none;
+    height: 50vmin;
+    pointer-events: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+    .App-logo {
+        animation: App-logo-spin infinite 20s linear;
+    }
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+    background-color: #282c34;
+    min-height: 120vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
 }
 
 .App-link {
-  color: #61dafb;
+    color: #61dafb;
 }
 
 @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.movie-card img {
+    max-width: 200px;
+    max-height: 200px;
+}
+
+.header {
+    width: 100%;
+    height: 70px;
+    color: #9b591b;
+    background-color: #065985;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    border: red;
+}
+
+.navbar li {
+    margin: 20px;
+    font-size: 1em;
+    font-weight: 500;
+}
+
+.search-container {
+    margin: 10px 60px 10px 10px;
+    height: 28px;
+    width: 193px;
+    min-width: 203px;
+    max-width: 203px;
+    display: flex;
+}
+
+.search {
+    background-color: white;
+    font-size: 15px;
+    padding: 5px;
+    margin: 0;
+    border-radius: 0.5em;
+}
+
+.search-btn {
+    width: 25px;
+    float: right;
+    padding: 9px;
+    color: black;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 670px) {
+    .header {
+        height: 330px;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .navbar {
+        display: block;
+        padding: 0;
+    }
+    .search-container {
+        margin: 0 auto;
+    }
+}
+
+.navbar li::after,
+.navbar li.active::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 5px;
+    background-color: #01b4e4;
+}
+
+.navbar li:hover::after,
+.navbar li.active::after {
+    opacity: 100;
+    width: 100%;
+}
+
+.navbar img {
+    height: 80px;
+}
+
+.navbar .home {
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.navbar .favorite {
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.navbar .rated {
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.movie-card {
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
+    transition: 0.3s;
+    margin: 30px 20px;
+    flex: 1 1 200px;
+}
+
+.movie-card .img {
+    height: auto;
+    margin: 20px;
+    cursor: pointer;
+}
+
+.movie-card .title {
+    height: 30px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 1em;
+    padding-top: 5px;
+    margin: 0;
+}
+
+.movie-card .rateAndLike {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 8px 20px;
+}
+
+.movie-card .rate {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.movie-card .star {
+    color: #f5c518;
+    padding-right: 5px;
+}
+
+.movie-card .rateNumber {
+    margin-top: 0;
+}
+
+.movie-card .liked {
+    cursor: pointer;
+}
+
+.modal-window {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 1);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+    /* visibility: hidden; */
+    /* opacity: 0; */
+    transition: all 0.3s;
+}
+
+.modal-window:target {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal-window>div {
+    width: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 2em;
+    background: white;
+}
+
+.modal-window header {
+    font-weight: bold;
+}
+
+.modal-window h1 {
+    font-size: 150%;
+    margin: 0 0 15px;
+}
+
+.modal-close {
+    color: #aaa;
+    line-height: 50px;
+    font-size: 80%;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 0;
+    width: 70px;
+    cursor: pointer;
+}
+
+.modal-close:hover {
+    color: black;
+}
+
+p.ellipsis {
+    height: 60px;
+    text-align: left;
+    overflow: hidden;
+    display: inline-block;
+    text-overflow: ellipsis;
+    border: 1px solid #ddd;
+    margin: 0;
 }

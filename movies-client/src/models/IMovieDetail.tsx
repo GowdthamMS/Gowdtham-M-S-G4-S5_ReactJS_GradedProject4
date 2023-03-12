@@ -1,9 +1,9 @@
 interface IMovieDetail{
 
-    posterurl: string,
+    poster: any,
   title: string,
   storyline: string,
-  closeModal: any
+  closeModel: any
   }
   
   export default IMovieDetail;
