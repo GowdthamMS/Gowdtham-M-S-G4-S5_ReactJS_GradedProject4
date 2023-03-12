@@ -7,7 +7,7 @@ interface IMovieItem{
   liked: boolean,
   onToggleHeart:any,
   storyline: string,
-  onToggleModel: any
+  onToggleModal: any
   }
   
   export default IMovieItem;

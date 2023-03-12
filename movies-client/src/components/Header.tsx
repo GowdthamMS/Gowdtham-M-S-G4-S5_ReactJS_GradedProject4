@@ -42,8 +42,10 @@ const Header = ({search}:IParams) => {
       { location.pathname !== "/favourites" &&
             <div className="search-container">
               <input className="search" type="text" onChange={(e)=>{search(e.target.value)}}></input>
+              <div className="search-btn">
                 <IoSearch/>
               </div>
+            </div>
       }
     </div>
   );

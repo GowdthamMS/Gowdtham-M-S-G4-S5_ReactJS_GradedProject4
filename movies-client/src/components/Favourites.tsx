@@ -6,7 +6,7 @@ const Favourites = () => {
 
     const [searchTerm, setSearchTerm] = useState('');
     const search = (searchTermInput: string) => {
-        console.log("", searchTermInput);
+        console.log("satya", searchTermInput);
         setSearchTerm(searchTermInput);
     }
 
