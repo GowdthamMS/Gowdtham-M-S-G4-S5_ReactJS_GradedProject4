@@ -5,8 +5,7 @@ import NotFound from './components/NotFound';
 import MoviesInTheaters from './components/MoviesInTheaters';
 import TopRatedIndian from './components/TopRatedIndian';
 import TopRatedMovies from './components/TopRatedMovies';
-import {
-  BrowserRouter as Router, Routes, Route} from "react-router-dom";
+import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 
 function App() {
 
