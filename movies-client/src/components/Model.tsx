@@ -5,7 +5,6 @@ const Model = ({title, posterurl, storyline, closeModel}:IMovieDetail) => {
     
     <div className="model-window">
     <div>
-      <a href="#" title="Close" className="model-close" onClick={()=>{closeModel()}}>Close</a>
       <h1>{title}</h1>
       <img className="img" src={posterurl} alt="movie item" />
       <br/>
