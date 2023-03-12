@@ -1,13 +1,13 @@
 interface IMovieItem{
 
     id: number,
-    poster: any,
+    posterurl: string,
   title: string,
   averageRating: string,
   liked: boolean,
   onToggleHeart:any,
   storyline: string,
-  onToggleModel: any
+  onToggleModal: any
   }
   
   export default IMovieItem;

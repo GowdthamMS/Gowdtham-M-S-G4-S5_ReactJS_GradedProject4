@@ -1,11 +1,17 @@
 import './App.css';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Outlet
+} from "react-router-dom";
+
 import Favourites from './components/Favourites';
 import Home from './components/Home';
 import NotFound from './components/NotFound';
 import MoviesInTheaters from './components/MoviesInTheaters';
 import TopRatedIndian from './components/TopRatedIndian';
 import TopRatedMovies from './components/TopRatedMovies';
-import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 
 function App() {
 
@@ -24,6 +30,7 @@ function App() {
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Router>
+      <Outlet />
     </div>
   );
 }

@@ -8,7 +8,7 @@ const getMovieList = async () => {
       // console.log('returned from local storage')
       return JSON.parse(lsMovies); }
 
-    const getItemsUrl = "/movies-server/data.json";
+    const getItemsUrl = "/json/data.json";
   
     const responseData = await axios.get<IMovieObj>(getItemsUrl);
 
