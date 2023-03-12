@@ -186,7 +186,7 @@
     cursor: pointer;
 }
 
-.modal-window {
+.model-window {
     position: fixed;
     background-color: rgba(0, 0, 0, 1);
     top: 0;
@@ -199,13 +199,13 @@
     transition: all 0.3s;
 }
 
-.modal-window:target {
+.model-window:target {
     visibility: visible;
     opacity: 1;
     pointer-events: auto;
 }
 
-.modal-window>div {
+.model-window>div {
     width: 400px;
     position: absolute;
     top: 50%;
@@ -215,16 +215,16 @@
     background: white;
 }
 
-.modal-window header {
+.model-window header {
     font-weight: bold;
 }
 
-.modal-window h1 {
+.model-window h1 {
     font-size: 150%;
     margin: 0 0 15px;
 }
 
-.modal-close {
+.model-close {
     color: #aaa;
     line-height: 50px;
     font-size: 80%;
@@ -236,7 +236,7 @@
     cursor: pointer;
 }
 
-.modal-close:hover {
+.model-close:hover {
     color: black;
 }
 
