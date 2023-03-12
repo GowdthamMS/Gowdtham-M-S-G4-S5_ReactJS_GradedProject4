@@ -1,11 +1,11 @@
 import IMovieDetail from "../models/IMovieDetail";
 
-const Modal = ({title, posterurl, storyline, closeModal}:IMovieDetail) => {
+const Model = ({title, posterurl, storyline, closeModel}:IMovieDetail) => {
     return (<>
     
-    <div className="modal-window">
+    <div className="model-window">
     <div>
-      <a href="#" title="Close" className="model-close" onClick={()=>{closeModal()}}>Close</a>
+      <a href="#" title="Close" className="model-close" onClick={()=>{closeModel()}}>Close</a>
       <h1>{title}</h1>
       <img className="img" src={posterurl} alt="movie item" />
       <br/>
@@ -16,4 +16,4 @@ const Modal = ({title, posterurl, storyline, closeModal}:IMovieDetail) => {
     </>);
 }
 
-export default Modal;
+export default Model;
