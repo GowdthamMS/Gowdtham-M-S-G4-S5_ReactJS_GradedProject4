@@ -3,7 +3,7 @@ import MovieCard from "./MovieCard";
 import { getMovieList } from "../services/Services";
 import { useEffect, useState } from "react";
 import IMovieItem from "../models/IMovieItem";
-import Modal from "./Modal";
+import Model from "./Model";
 import IMovieDetail from "../models/IMovieDetail";
 
 const Container = styled.div`
@@ -25,38 +25,38 @@ interface cat {
 
 const MovieList = ({ category, faved = false, searchTerm='' }: cat) => {
 
-  const closeModal = () => {
+  const closeModel = () => {
     setshowDetails({
       show: false
     })
   }
 
-  const modalData1: IMovieDetail = {
+  const modelData1: IMovieDetail = {
     title: "Sample",
     posterurl: "Sample URL",
     storyline: "Story",
-    closeModal: closeModal
+    closeModel: closeModel
   };
 
-  const [modalData, setModalData] = useState<IMovieDetail>(modalData1);
+  const [modelData, setModelData] = useState<IMovieDetail>(modelData1);
   const [showDetials, setshowDetails] = useState({ show: false });
   const [movieListData, setMovieListData] = useState<IMovieItem[]>([]);
   const [favedMovieListData, setFavedMovieListData] = useState<IMovieItem[]>([]);
   const [searchData, setSearchData] = useState<IMovieItem[]>([]);
 
-  const toggleModal = (clikedId: number) => {
+  const toggleModel = (clikedId: number) => {
     let card = movieListData.find((mListItem) => {
       return mListItem.id === clikedId;
     })
     if (card) {
       card.liked = true;
     }
-    setModalData(
+    setModelData(
       {
         title: card?.title || '',
         posterurl: card?.posterurl || '',
         storyline: card?.storyline || '',
-        closeModal: closeModal
+        closeModel: closeModel
       }
     )
     setshowDetails({
@@ -141,7 +141,7 @@ const MovieList = ({ category, faved = false, searchTerm='' }: cat) => {
             averageRating={getAvgRating(movie).toString()}
             liked={movie.liked}
             onToggleHeart={handleHeart}
-            onToggleModal={toggleModal}
+            onToggleModel={toggleModel}
             storyline={movie.storyline}
           />
         );
@@ -156,7 +156,7 @@ const MovieList = ({ category, faved = false, searchTerm='' }: cat) => {
             averageRating={getAvgRating(movie).toString()}
             liked={movie.liked}
             onToggleHeart={handleHeart}
-            onToggleModal={toggleModal}
+            onToggleModel={toggleModel}
             storyline={movie.storyline}
           />
         );
@@ -171,18 +171,18 @@ const MovieList = ({ category, faved = false, searchTerm='' }: cat) => {
             averageRating={getAvgRating(movie).toString()}
             liked={movie.liked}
             onToggleHeart={handleHeart}
-            onToggleModal={toggleModal}
+            onToggleModel={toggleModel}
             storyline={movie.storyline}
           />
         );
       })}
     </Container>
     {
-      showDetials.show && <Modal
-        title={modalData.title}
-        posterurl={modalData.posterurl}
-        storyline={modalData.storyline}
-        closeModal={modalData.closeModal}
+      showDetials.show && <Model
+        title={modelData.title}
+        posterurl={modelData.posterurl}
+        storyline={modelData.storyline}
+        closeModel={modelData.closeModel}
       />
     }
   </>

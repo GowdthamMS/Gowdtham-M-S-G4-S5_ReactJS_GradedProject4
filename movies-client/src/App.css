@@ -70,11 +70,11 @@
 }
 
 .search-container {
-    margin: 10px 60px 10px 10px;
+    margin: 15px 60px 15px 15px;
     height: 28px;
     width: 193px;
-    min-width: 203px;
-    max-width: 203px;
+    min-width: 190px;
+    max-width: 190px;
     display: flex;
 }
 
@@ -84,14 +84,6 @@
     padding: 5px;
     margin: 0;
     border-radius: 0.5em;
-}
-
-.search-btn {
-    width: 25px;
-    float: right;
-    padding: 9px;
-    color: black;
-    cursor: pointer;
 }
 
 @media only screen and (max-width: 670px) {
