@@ -9,6 +9,7 @@
 .App-logo {
     height: 50vmin;
     pointer-events: none;
+    background-color: #ddd;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -47,7 +48,7 @@
 
 .header {
     width: 100%;
-    height: 70px;
+    height: 90px;
     background-color: #065985;
     display: inline-flex;
     flex-direction: row;
@@ -58,7 +59,7 @@
     display: flex;
     align-items: center;
     list-style: none;
-    border: red;
+    border: rgb(255, 250, 250);
 }
 
 .navbar li {
@@ -147,7 +148,7 @@
 
 .movie-card .img {
     height: auto;
-    margin: 20px;
+    margin: 50px;
     cursor: pointer;
 }
 
@@ -193,9 +194,7 @@
     right: 0;
     bottom: 0;
     left: 0;
-    z-index: 999;
-    /* visibility: hidden; */
-    /* opacity: 0; */
+    z-index: 1px;
     transition: all 0.3s;
 }
 
@@ -220,32 +219,75 @@
 }
 
 .model-window h1 {
-    font-size: 150%;
-    margin: 0 0 15px;
+    font-size: auto;
+    margin: auto;
 }
 
 .model-close {
-    color: #aaa;
-    line-height: 50px;
+    color: #121111;
+    line-height: auto;
     font-size: 80%;
     position: absolute;
-    right: 0;
-    text-align: center;
-    top: 0;
+    right: 10px;
+    text-align: right;
+    top: 2px;
     width: 70px;
     cursor: pointer;
 }
 
 .model-close:hover {
-    color: black;
+    color: rgb(0, 0, 0);
 }
 
-p.ellipsis {
-    height: 60px;
+p. {
+    margin: auto;
+}
+
+p.storyline {
+    height: 120px;
     text-align: left;
-    overflow: hidden;
-    display: inline-block;
-    text-overflow: ellipsis;
-    border: 1px solid #ddd;
-    margin: 0;
+    display: block;
+    margin: 0 0 50px;
+}
+
+p.imdbrating {
+    height: 5px;
+    text-align: left;
+    display: block;
+    margin: 0 0 5px;
+}
+
+p.contentrating {
+    height: 5px;
+    text-align: left;
+    display: block;
+    margin: 0 0 5px;
+}
+
+p.duration {
+    height: 5px;
+    text-align: left;
+    display: block;
+    margin: 0 0 5px;
+}
+
+p.genres {
+    height: 5px;
+    text-align: left;
+    display: block;
+    margin: 0 0 5px;
+}
+
+p.actors {
+    height: 5px;
+    text-align: left;
+    display: block;
+    margin: 0 0 5px;
+}
+
+p.releasedate {
+    height: 5px;
+    text-align: left;
+    display: block;
+    margin: 0 0 5px;
 }

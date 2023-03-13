@@ -35,6 +35,12 @@ const MovieList = ({ category, faved = false, searchTerm='' }: cat) => {
     title: "Sample",
     posterurl: "Sample URL",
     storyline: "Story",
+    ImdbRating: "Imdb Rating",
+    ContentRating: "Content Rating",
+    Duration: "Duration",
+    Genres: "Genres",
+    Actors: "Actors",
+    ReleaseDate: "Release Date",
     closeModel: closeModel
   };
 
@@ -56,6 +62,12 @@ const MovieList = ({ category, faved = false, searchTerm='' }: cat) => {
         title: card?.title || '',
         posterurl: card?.posterurl || '',
         storyline: card?.storyline || '',
+        ImdbRating: card?.ImdbRating || '',
+        ContentRating: card?.ContentRating || '',
+        Duration: card?.Duration || '',
+        Genres: card?.Genres || '',
+        Actors: card?.Actors || '',
+        ReleaseDate: card?.ReleaseDate || '',
         closeModel: closeModel
       }
     )
@@ -142,8 +154,14 @@ const MovieList = ({ category, faved = false, searchTerm='' }: cat) => {
             liked={movie.liked}
             onToggleHeart={handleHeart}
             onToggleModel={toggleModel}
-            storyline={movie.storyline}
-          />
+            storyline={movie.storyline} 
+            ImdbRating={movie.ImdbRating} 
+            ContentRating={movie.ContentRating} 
+            Duration={movie.Duration} 
+            Genres={movie.Genres} 
+            Actors={movie.Actors} 
+            ReleaseDate={movie.ReleaseDate}          
+            />
         );
       })}
       {searchTerm!=='' && searchData.map((movie: IMovieItem, index: number) => {
@@ -157,9 +175,15 @@ const MovieList = ({ category, faved = false, searchTerm='' }: cat) => {
             liked={movie.liked}
             onToggleHeart={handleHeart}
             onToggleModel={toggleModel}
-            storyline={movie.storyline}
-          />
-        );
+            storyline={movie.storyline}             
+            ImdbRating={movie.ImdbRating} 
+            ContentRating={movie.ContentRating} 
+            Duration={movie.Duration} 
+            Genres={movie.Genres} 
+            Actors={movie.Actors} 
+            ReleaseDate={movie.ReleaseDate}
+            /> 
+            );
       })}
       {faved && favedMovieListData.map((movie: IMovieItem, index: number) => {
         return (
@@ -173,7 +197,13 @@ const MovieList = ({ category, faved = false, searchTerm='' }: cat) => {
             onToggleHeart={handleHeart}
             onToggleModel={toggleModel}
             storyline={movie.storyline}
-          />
+            ImdbRating={movie.ImdbRating} 
+            ContentRating={movie.ContentRating} 
+            Duration={movie.Duration} 
+            Genres={movie.Genres} 
+            Actors={movie.Actors} 
+            ReleaseDate={movie.ReleaseDate} 
+            />
         );
       })}
     </Container>
@@ -182,6 +212,12 @@ const MovieList = ({ category, faved = false, searchTerm='' }: cat) => {
         title={modelData.title}
         posterurl={modelData.posterurl}
         storyline={modelData.storyline}
+        ImdbRating={modelData.ImdbRating}
+        ContentRating={modelData.ContentRating}  
+        Duration={modelData.Duration} 
+        Genres={modelData.Genres}  
+        Actors={modelData.Actors}  
+        ReleaseDate={modelData.ReleaseDate}  
         closeModel={modelData.closeModel}
       />
     }
